@@ -1,0 +1,47 @@
+There are n stones on the table in a row, each of them can be red, green or blue. Count the minimum number of stones to take from the table so that any two neighboring stones had different colors. Stones in a row are considered neighboring if there are no other stones between them.
+
+Input Format
+
+The first line contains integer n — the number of stones on the table.
+
+The next line contains string s, which represents the colors of the stones. We'll consider the stones in the row numbered from 1 to n from left to right. Then the i-th character s equals "R", if the i-th stone is red, "G", if it's green and "B", if it's blue.
+
+Constraints
+
+1 ≤ n ≤ 50
+Output Format
+
+Print a single integer — the answer to the problem.
+
+Sample Input 0
+
+3
+RRG
+Sample Output 0
+
+1
+
+
+
+<_--------------------------------------solutions ----------------------------_>
+
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int c=0;
+        int t=sc.nextInt();
+        String str=sc.next();
+        for(int i=0;i<str.length()-1;i++)
+        {
+            if(str.charAt(i)==str.charAt(i+1))
+                c++;
+        }
+        System.out.println(c);
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
