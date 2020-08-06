@@ -1,0 +1,106 @@
+
+
+
+An integer d is a divisor of an integer n if the remainder of n %d=0  .
+
+Given an integer, for each digit that makes up the integer determine whether it is a divisor. Count the number of divisors occurring within the integer.
+
+Note: Each digit is considered to be unique, so each occurrence of the same digit should be counted 
+(e.g. for n=111, 1   is a divisor of 111 each time it occurs so the answer is 3 ).
+
+Function Description
+
+Complete the findDigits function in the editor below. It should return an integer representing the 
+number of digits of d that are divisors of d .
+
+findDigits has the following parameter(s):
+
+
+n: an integer to analyze
+Input Format
+The first line is an integer , t  , indicating the number of test cases.
+The  subsequent lines each contain an integer n , .
+
+Constraints
+
+1<=t<=10^5
+0<n<10^9
+
+Output Format
+
+For every test case, count the number of digits in  that are divisors of n . Print each answer on a new line.
+
+Sample Input
+
+2
+12
+1012
+Sample Output
+
+2
+3
+Explanation
+
+The number  is broken into two digits,  and . When  is divided by either of those two digits, the remainder is  so they are both divisors.
+
+The number  is broken into four digits, , , , and .  is evenly divisible by its digits , , and , but it is not divisible by  as division by zero is undefined.
+
+Submissions: 46
+Max Score: 20
+Rate This Challenge:
+
+    
+More
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the findDigits function below.
+def findDigits(n):
+    c=0
+    for  i in str(n):
+        if(int(i)!=0):
+            if(int(n)%int(i)==0):
+                c=c+1
+    return c
+
+
+        
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    t = int(input())
+
+    for t_itr in range(t):
+        n = int(input())
+
+        result = findDigits(n)
+
+        fptr.write(str(result) + '\n')
+
+    fptr.close()
+
+
+
+
+
+<<-------------------------------------------------..>
+ Secound solutions 
+ --------------------------------------------
+ str=input("Enter num")
+c=0
+for  i in str:
+    if(int(i)!=0):
+        if(int(str)%int(i)==0):
+            c=c+1
+print("number is",str)
+print("count is ",c)
+
+
+        
