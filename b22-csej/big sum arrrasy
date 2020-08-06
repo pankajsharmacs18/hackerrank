@@ -1,0 +1,38 @@
+package hackerrankSol;
+
+import java.util.Scanner;
+
+class   Implement
+{
+    Scanner sc=new Scanner(System.in);
+    public void intputArray(long arr[])
+    {
+        for (int i = 0; i <arr.length ; i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+    }
+    public long bigSumArray(long arr[])
+    {
+        long sum=0;
+        for (int i = 0; i < arr.length; i++)
+        {
+        sum=sum+arr[i];
+        }
+        return sum;
+    }
+}
+public class HackMain
+
+{
+    public static void main(String... PankajSharma)
+    {
+        Scanner sc=new Scanner(System.in);
+        Implement obj=new Implement();
+        int size=sc.nextInt();
+        long[] arr=new long[size];
+        obj.intputArray(arr);
+        System.out.println(obj.bigSumArray(arr));
+        System.out.println("Pankaj Sharma");
+    }
+}
