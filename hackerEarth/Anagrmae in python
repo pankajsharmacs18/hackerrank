@@ -1,0 +1,10 @@
+t=int(input(""))
+for i in range(t):
+    str=list(input(""))
+    str1=list(input(""))
+    for i in str1[:]:
+        if i in str:
+            str.remove(i)
+            str1.remove(i)
+    print(len(str)+len(str1))
+# Write your code here
