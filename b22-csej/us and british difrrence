@@ -1,0 +1,10 @@
+n = int(input())
+text = ""
+for _ in range(n):
+    text += " " + input()
+t = int(input())
+for _ in range(t):
+    american = input()
+    british = american[:-2] + 'se'
+    count = text.count(american) + text.count(british)
+    print(count)
