@@ -1,0 +1,40 @@
+package leetcode;
+
+import java.util.Scanner;
+
+class ArrImple
+{
+   public boolean palindrome(int num)
+   {
+       int temp=num;
+       int rev=1;
+       while (temp!=0)
+       {
+           rev=(rev*10)+temp%10;
+           temp=temp/10;
+       }
+       if (rev==num && num>=0)
+       {
+           return  true;
+       }
+       else
+       {
+           return  false;
+       }
+   }
+}
+public class LeetCode
+{
+    public static void main(String... PankajSharma)
+    {
+        Scanner sc=new Scanner(System.in);
+        ArrImple obj=new ArrImple();
+        System.out.println("Entrer number to be checked : ");
+        int num=sc.nextInt();
+        boolean res=obj.palindrome(num);
+        System.out.println(res);
+
+
+        System.out.println("Pankaj Sharma : ");
+    }
+}
