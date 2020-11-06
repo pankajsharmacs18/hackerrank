@@ -1,0 +1,31 @@
+package leetcode;
+
+import java.util.Scanner;
+
+class ArrImple
+{
+   public int reverseNumber(int num)
+   {
+       int rev=0;
+       while (num!=0)
+       {
+           rev=(rev*10)+num%10;
+           num=num/10;
+       }
+       return rev;
+   }
+}
+public class LeetCode
+{
+    public static void main(String... PankajSharma)
+    {
+        Scanner sc=new Scanner(System.in);
+        ArrImple obj=new ArrImple();
+        System.out.println("Entrer number to reversed: ");
+        int num=sc.nextInt();
+        System.out.println("Entered Number  is : "+num);
+         num =obj.reverseNumber(num);
+        System.out.println("Reverses Number is : "+num);
+        System.out.println("Pankaj Sharma : ");
+    }
+}
