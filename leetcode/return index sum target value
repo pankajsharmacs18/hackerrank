@@ -1,0 +1,63 @@
+package leetcode;
+
+import java.util.Scanner;
+
+class ArrImple
+{
+    Scanner sc=new Scanner(System.in);
+    public void insertArray(int[] arr)
+    {
+        System.out.println("Enter Value in arrays : ");
+        for (int i = 0; i <arr.length; i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+    }
+    public int[] twoSum(int[] arr,int sum)
+    {
+        int[] s=new int[2];
+
+        for (int i = 0; i <arr.length ; i++)
+        {
+
+            for (int j = i+1; j <arr.length ; j++)
+            {
+                if (arr[i]+arr[j]==sum&&arr[i]!=arr[j])
+                {
+                    s[0]=i;
+                    s[1]=j;
+                    break;
+                }
+
+            }
+
+        }
+        return s;
+    }
+    public void display(int[] arr)
+    {
+        for (int i = 0; i <arr.length ; i++)
+        {
+            System.out.print(arr[i]+" ");
+        }
+    }
+}
+public class LeetCode
+{
+    public static void main(String... PankajSharma)
+    {
+        Scanner sc=new Scanner(System.in);
+        ArrImple obj=new ArrImple();
+        System.out.println("Enter size of arrays  ");
+        int size=sc.nextInt();
+        int[] arr=new int[size];
+        obj.insertArray(arr);
+        obj.display(arr);
+        System.out.println("enter target sum ");
+        int sum=sc.nextInt();
+        int res[]=new int[2];
+                res=obj.twoSum(arr,sum);
+        System.out.println(res[0]+"   "+res[1]);
+        System.out.println("Pankaj Sharma : ");
+    }
+}
