@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{	
+	char str[100];
+	int i=0,sum=0;
+	scanf("%s",&str);
+	while(i<strlen(str))
+	{
+		sum=sum+((int)str[i])-96;
+		i++;
+	}
+printf("%d",sum);
+}
